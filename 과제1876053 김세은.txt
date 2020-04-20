@@ -1,0 +1,138 @@
+/*1-1 학생별 총점과 평균 출력 프로그램_1876053  김세은*/
+#define  _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(void) {                                 //main 함수 시작
+
+	int num, eng, math, sci, total;              //변수 선언
+	float ave;
+
+	printf("학번을 입력하세요 : ");              //사용자에게 학번을 입력받음
+	scanf("%d", &num);
+
+	printf("영어 점수를 입력하세요 : ");         //사용자에게 과목별 점수 값을 입력받음
+	scanf("%d", &eng);
+
+	printf("수학 점수를 입력하세요 : ");
+	scanf("%d", &math);
+
+	printf("과학 점수를 입력하세요 : ");
+	scanf("%d", &sci);
+
+	total = eng + math + sci;                    //총점과 평균 정의
+	ave = (float)total / 3;
+
+	printf("===========================================\n");       //학번, 점수, 총점, 평균 출력  
+	printf("학번 : %d 학생은\n", num);
+	printf("===========================================\n");
+
+	printf("영어 : %d점\t수학 : %d점\t과학 :  %d점\n", eng, math, sci);
+	printf("총첨 : %d점\t평균 : %5.2f점 입니다\n", total, ave);
+
+	return 0;
+
+}                 //main 함수 끝
+
+
+
+
+
+
+
+
+
+
+
+/*1-2 원의 둘레와 원의 넓이 계산 프로그램_1876053  김세은*/
+#define  _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define PI 3.1415                        //매크로 상수로 원주율 정의
+
+int main(void) {                         //main 함수 시작
+	int rad;                             //변수 선언
+	float cir, area;
+
+	printf("반지름을 입력하세요 : ");    //사용자에게 반지름 값을 입력받음
+	scanf("%d", &rad);
+
+	cir = rad * 2 * PI;                  //원의 둘레와 넓이 정의
+	area = rad * rad * PI;
+
+	printf("=========================================\n");        //원의 둘레와 넓이 출력
+	printf("반지름이 %d인 원의 둘레 : %8.2f\n", rad, cir);
+	printf("반지름이 %d인 원의 넓이 : %8.2f\n", rad, area);
+	printf("=========================================\n");
+
+	return 0;
+
+}				//main 함수 끝
+
+
+
+
+
+
+
+/*1-3 휴대폰 사용 요금 계산 프로그램_1876053  김세은*/
+#define  _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(void) {                                     //main 함수 시작
+	int call, message;                               //변수 선언
+	float fee;
+
+	printf("통화시간을 입력하세요(분) : ");          //사용자에게 통화시간을 입력받음
+	scanf("%d", &call);
+
+	printf("메세지 송신횟수를 입력하세요(건) : ");   //사용자에게 송신횟수를 입력받음
+	scanf("%d", &message);
+
+	fee = 3780 + (call * 20) + (message * 5);        //사용요금 정의
+
+	printf("=============================================\n");     //휴대폰 요금내역 출력
+	printf("\t\t휴대폰 요금내역\n");
+	printf("=============================================\n");
+	printf("통화시간(분) : %d분\t메세지 송신횟수(건) : %d건\n", call, message);
+	printf("==> 월 사용 금액 : %8.1f원\n", fee);
+
+	return 0;
+
+}                //main 함수 끝
+
+
+
+
+
+
+/*1-4 휴대폰 사용 요금 비교 프로그램_1876053  김세은*/
+#define  _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main(void) {                                         //main 함수 시작
+	int call, message;                                   //변수 선언
+	float fee1, fee2, fee3; 
+
+	printf("통화시간을 입력하세요(분) : ");              //사용자에게 통화시간을 입력받음
+	scanf_s("%d", &call);
+
+	printf("메세지 송신횟수를 입력하세요(건) : ");       //사용자에게 송신횟수를 입력받음
+	scanf_s("%d", &message);
+
+	fee1 = 2810 + (call * 23) + (message * 6);           //각 요금표 별 사용요금 정의
+	fee2 = 3780 + (call * 20) + (message * 5);
+	fee3 = 4530 + (call * 18) + (message * 3);
+
+	printf("=============================================\n");           //휴대폰 요금내역 출력
+	printf("\t\t휴대폰 요금내역\n");
+	printf("=============================================\n");
+	printf("통화시간(분) : %d분\t메세지 송신횟수(건) : %d건\n\n", call, message);
+
+	printf("1안 사용요금 : %8.1f원\n", fee1);
+	printf("2안 사용요금 : %8.1f원\n", fee2);
+	printf("3안 사용요금 : %8.1f원\n", fee3);
+
+	return 0;
+
+
+}     //main 함수 끝
+
+
+
+
